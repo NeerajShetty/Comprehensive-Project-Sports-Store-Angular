@@ -10,7 +10,7 @@ import { customer } from 'src/shared/Model/customer';
   providedIn: 'root'
 })
 export class CustomerService {
-  private apiURL = "https://localhost:44359/api/";
+  private apiURL = "https://localhost:44327/api/";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
