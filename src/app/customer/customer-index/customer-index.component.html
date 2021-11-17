@@ -11,7 +11,7 @@
                   <p class="card-text">{{customer.contactNumber}}</p>
                   <div class="row">
                     <div class="col-auto mr-auto">
-                        <a href="#" class="btn btn-primary">Orders</a>
+                        <a href="#" class="btn btn-primary" [routerLink]="['/customer/order',customer.id]">Orders</a>
                     </div>
                     <div class="col-auto">
                         <button (click)="deleteCustomer(customer.id)"><i class="material-icons md-18">delete</i></button>

@@ -11,13 +11,18 @@ import { CustomerupdateComponent } from './customer/customerupdate/customerupdat
 import { CustomerService } from './customer/customer.service';
 
 import { HttpClientModule } from '@angular/common/http';
+
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list'; 
+import {MatTableModule} from '@angular/material/table';
+
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ItemindexComponent } from './item/itemindex/itemindex.component';
 import { ItemviewComponent } from './item/itemview/itemview.component';
 import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
 import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
 ;import { ItemService } from './item/item.service';
+import { OrderindexComponent } from './order/orderindex/orderindex.component';
 
 
 @NgModule({
@@ -30,7 +35,8 @@ import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
     ItemindexComponent,
     ItemviewComponent,
     ItemcreateComponent,
-    ItemupdateComponent
+    ItemupdateComponent,
+    OrderindexComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,9 @@ import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
     HttpClientModule,
     MatGridListModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [CustomerService,ItemService],
   bootstrap: [AppComponent]

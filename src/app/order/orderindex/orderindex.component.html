@@ -1,0 +1,33 @@
+
+<a href="#" routerLink="/customer/index" class="btn btn-primary">Back</a>
+<mat-list role="list" *ngFor= "let order of orders" >
+    <dl class="row">
+        <dt class="col-sm-3">Order no:</dt>
+        <dd class="col-sm-9">{{order.id}}</dd>
+        <dt class="col-sm-3">Order Date:</dt>
+        <dd class="col-sm-9">{{order.orderDate}}</dd>
+        <dt class="col-sm-3">Payment Mode:</dt>
+        <dd class="col-sm-9">{{order.paymentMode}}</dd>
+      </dl>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Color</th>
+            <th scope="col">Size</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody  *ngFor = "let item of order.item">
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.size}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </mat-list>
+  

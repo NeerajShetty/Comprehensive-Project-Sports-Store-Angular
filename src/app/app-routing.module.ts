@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomercreateComponent } from './customer/customercreate/customercreate.component';
 import { CustomerIndexComponent } from './customer/customer-index/customer-index.component';
 import { CustomerupdateComponent } from './customer/customerupdate/customerupdate.component';
-import { CustomerviewComponent } from './customer/customerview/customerview.component';
+import { OrderindexComponent } from './order/orderindex/orderindex.component';
 
 import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
 import { ItemindexComponent } from './item/itemindex/itemindex.component';
@@ -14,7 +14,7 @@ import { ItemviewComponent } from './item/itemview/itemview.component';
 const routes: Routes = [
   //{path:'',redirectTo:'customer/index',component:CustomerIndexComponent},
   {path:'customer/index',component:CustomerIndexComponent},
-  {path:'customer/view/:id',component:CustomerviewComponent},
+  {path:'customer/order/:id',component:OrderindexComponent},
   {path:'customer/create',component:CustomercreateComponent},
   {path:'customer/update/:id',component:CustomerupdateComponent},
   {path:'item/index',component:ItemindexComponent},
