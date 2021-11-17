@@ -8,12 +8,16 @@ import { CustomerIndexComponent } from './customer/customer-index/customer-index
 import { CustomerviewComponent } from './customer/customerview/customerview.component';
 import { CustomercreateComponent } from './customer/customercreate/customercreate.component';
 import { CustomerupdateComponent } from './customer/customerupdate/customerupdate.component';
-import { CustomerdeleteComponent } from './customer/customerdelete/customerdelete.component';
 import { CustomerService } from './customer/customer.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ItemindexComponent } from './item/itemindex/itemindex.component';
+import { ItemviewComponent } from './item/itemview/itemview.component';
+import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
+import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
+;import { ItemService } from './item/item.service';
 
 
 @NgModule({
@@ -23,7 +27,10 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CustomerviewComponent,
     CustomercreateComponent,
     CustomerupdateComponent,
-    CustomerdeleteComponent
+    ItemindexComponent,
+    ItemviewComponent,
+    ItemcreateComponent,
+    ItemupdateComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService,ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

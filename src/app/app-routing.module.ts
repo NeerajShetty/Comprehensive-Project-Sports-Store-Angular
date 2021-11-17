@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { CustomercreateComponent } from './customer/customercreate/customercreate.component';
-import { CustomerdeleteComponent } from './customer/customerdelete/customerdelete.component';
 import { CustomerIndexComponent } from './customer/customer-index/customer-index.component';
 import { CustomerupdateComponent } from './customer/customerupdate/customerupdate.component';
 import { CustomerviewComponent } from './customer/customerview/customerview.component';
+
+import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
+import { ItemindexComponent } from './item/itemindex/itemindex.component';
+import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
+import { ItemviewComponent } from './item/itemview/itemview.component';
 
 const routes: Routes = [
   //{path:'',redirectTo:'customer/index',component:CustomerIndexComponent},
@@ -13,6 +17,10 @@ const routes: Routes = [
   {path:'customer/view/:id',component:CustomerviewComponent},
   {path:'customer/create',component:CustomercreateComponent},
   {path:'customer/update/:id',component:CustomerupdateComponent},
+  {path:'item/index',component:ItemindexComponent},
+  {path:'item/view/:id',component:ItemviewComponent},
+  {path:'item/create',component:ItemcreateComponent},
+  {path:'item/update/:id',component:ItemupdateComponent},
 ];
 
 @NgModule({
