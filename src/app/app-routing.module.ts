@@ -10,6 +10,8 @@ import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
 import { ItemindexComponent } from './item/itemindex/itemindex.component';
 import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
 import { ItemviewComponent } from './item/itemview/itemview.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
   //{path:'',redirectTo:'customer/index',component:CustomerIndexComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path:'item/view/:id',component:ItemviewComponent},
   {path:'item/create',component:ItemcreateComponent},
   {path:'item/update/:id',component:ItemupdateComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent}
 ];
 
 @NgModule({

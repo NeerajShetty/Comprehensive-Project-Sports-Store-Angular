@@ -11,6 +11,7 @@ import { CustomerupdateComponent } from './customer/customerupdate/customerupdat
 import { CustomerService } from './customer/customer.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import{ NgxWebstorageModule, SessionStorageService} from 'ngx-webstorage'
 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list'; 
@@ -21,8 +22,15 @@ import { ItemindexComponent } from './item/itemindex/itemindex.component';
 import { ItemviewComponent } from './item/itemview/itemview.component';
 import { ItemcreateComponent } from './item/itemcreate/itemcreate.component';
 import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
-;import { ItemService } from './item/item.service';
+import { ItemService } from './item/item.service';
 import { OrderindexComponent } from './order/orderindex/orderindex.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthService } from './auth/auth.service';
+import { SessionStorageStrategy } from 'ngx-webstorage';
+import { RegisterComponent } from './auth/register/register.component';
+
+import { UserModule } from './user/user.module';
+import { UserRoutingModule } from './user/user-routing.module';
 
 
 @NgModule({
@@ -36,7 +44,10 @@ import { OrderindexComponent } from './order/orderindex/orderindex.component';
     ItemviewComponent,
     ItemcreateComponent,
     ItemupdateComponent,
-    OrderindexComponent
+    OrderindexComponent,
+    LoginComponent,
+    RegisterComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -47,9 +58,12 @@ import { OrderindexComponent } from './order/orderindex/orderindex.component';
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    NgxWebstorageModule.forRoot(),
+    UserModule,
+    UserRoutingModule
   ],
-  providers: [CustomerService,ItemService],
+  providers: [CustomerService,ItemService,AuthService,SessionStorageService,SessionStorageStrategy],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

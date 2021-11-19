@@ -1,0 +1,21 @@
+
+<mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let item of items">
+            <div class="card" style="width: 18rem;">
+                <img class="image-fluid  mx-auto d-block" src="assets/images/personfill.png" alt="Card image cap" width="50" height="70">
+                <div class="card-body">
+                  <h2>{{item.name}}</h2>
+                  <p class="card-text">{{item.color}}</p>
+                  <p class="card-text">{{item.size}}</p>
+                  <p class="card-text">{{item.price}}</p>
+                  <div class="row">
+                    <div class="col-auto mr-auto">
+                        <button class="btn btn-primary" (click)="addtocart(item)" >Add to cart</button>
+                    </div>
+                  </div>    
+                </div>
+              </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+

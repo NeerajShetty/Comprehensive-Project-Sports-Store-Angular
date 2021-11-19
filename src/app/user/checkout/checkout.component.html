@@ -1,0 +1,63 @@
+
+  <form [formGroup]="form" (ngSubmit)="submit()" >
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Color</th>
+            <th scope="col">Size</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody *ngFor = "let item of placedorder.item">
+          <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.color}}</td>
+            <td>{{item.size}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+        </tbody>
+        <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Total</td>
+              <td>{{sum}}</td>
+            </tr>
+          </tbody>
+      </table>
+    <div class="form-group">
+        <label for="dateoforder">Date of Order:</label>
+        <input 
+            formControlName="dateoforder"
+            id="dateoforder" 
+            type="date" 
+            class="form-control">
+    </div>
+    <label  for="inlineRadio1">Payment Mode</label>
+    <div class="form-group">
+        
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+            formControlName="paymentmethod"
+             type="radio" 
+             name="paymentmethod" 
+             id="inlineRadio1" 
+             value="Card">
+            <label class="form-check-label" for="inlineRadio1">Card</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" 
+            formControlName="paymentmethod" 
+            type="radio" 
+            name="paymentmethod" 
+            id="inlineRadio2" 
+            value="Cash">
+            <label class="form-check-label" for="inlineRadio2">Cash</label>
+          </div>
+    </div>
+    <button type="submit" class="btn btn-primary">submit</button>
+</form>
