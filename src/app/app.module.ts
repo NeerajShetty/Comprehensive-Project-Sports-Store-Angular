@@ -31,6 +31,7 @@ import { RegisterComponent } from './auth/register/register.component';
 
 import { UserModule } from './user/user.module';
 import { UserRoutingModule } from './user/user-routing.module';
+import { AdminloginComponent } from './auth/adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { UserRoutingModule } from './user/user-routing.module';
     OrderindexComponent,
     LoginComponent,
     RegisterComponent,
+    AdminloginComponent,
    
   ],
   imports: [

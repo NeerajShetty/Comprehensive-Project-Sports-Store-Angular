@@ -18,8 +18,22 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.cart=[];
     this.stratergy.get("cart").subscribe(res=>{
       this.cart = res
     })
+  }
+  iscartEmpty(){
+    if(this.cart.length==0){
+      return true;
+    }
+    return false;
+  }
+  deleteItem(item:item){
+    const index = this.cart.indexOf(item);
+    if (index > -1) {
+      this.cart.splice(index, 1);
+    }
+    this.stratergy.set('cart',this.cart);
   }
 }

@@ -14,6 +14,7 @@ export class AppComponent {
   constructor(
     public stratergy:SessionStorageStrategy
   ){}
+
   authenticated(){
     if(sessionStorage.length != 0){
        this.stratergy.get("user").subscribe(res=>{
@@ -23,7 +24,13 @@ export class AppComponent {
     }
     return false;
   }
+
   logout(){
     sessionStorage.clear();
   }
+
+  isadmin(){
+    return sessionStorage.key(0) == "admin";
+  }
+
 }

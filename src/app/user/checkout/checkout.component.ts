@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LocalStorageStrategy, SessionStorageStrategy } from 'ngx-webstorage';
+import { LocalStorageStrategy, SessionStorageStrategy,LocalStorage} from 'ngx-webstorage';
 import { order } from 'src/shared/Model/order';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
@@ -43,6 +43,7 @@ export class CheckoutComponent implements OnInit {
     console.log("placing oredr at component");
     this.placedorder.orderDate = this.form.value.dateoforder;
     this.placedorder.paymentMode = this.form.value.paymentmethod;
+    localStorage.clear();
     this.userservice.placeOrder(this.placedorder).subscribe(res=>{
       console.log(res);
       this.router.navigateByUrl("customer/order/"+this.placedorder.customer.id);

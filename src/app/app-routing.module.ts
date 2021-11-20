@@ -12,6 +12,7 @@ import { ItemupdateComponent } from './item/itemupdate/itemupdate.component';
 import { ItemviewComponent } from './item/itemview/itemview.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AdminloginComponent } from './auth/adminlogin/adminlogin.component';
 
 const routes: Routes = [
   //{path:'',redirectTo:'customer/index',component:CustomerIndexComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'item/create',component:ItemcreateComponent},
   {path:'item/update/:id',component:ItemupdateComponent},
   {path:'login',component:LoginComponent},
+  {path:'adminlogin',component:AdminloginComponent},
   {path:'register',component:RegisterComponent}
 ];
 

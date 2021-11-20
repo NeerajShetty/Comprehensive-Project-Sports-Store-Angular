@@ -29,5 +29,8 @@ export class ItemindexComponent implements OnInit {
     this.cart.push(item)
     this.statergy.set("cart",this.cart);
   }
+  isauthenticated(){
+    return sessionStorage.length != 0
+  }
 
 }

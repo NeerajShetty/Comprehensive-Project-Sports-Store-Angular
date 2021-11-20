@@ -10,7 +10,8 @@
                   <p class="card-text">{{item.price}}</p>
                   <div class="row">
                     <div class="col-auto mr-auto">
-                        <button class="btn btn-primary" (click)="addtocart(item)" >Add to cart</button>
+                        <button class="btn btn-primary" (click)="addtocart(item)" *ngIf="isauthenticated()">Add to cart</button>
+                        <button class="btn btn-primary" (click)="addtocart(item)" *ngIf="!isauthenticated()" disabled>Add to cart</button>
                     </div>
                   </div>    
                 </div>
