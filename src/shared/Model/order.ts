@@ -2,10 +2,10 @@ import { item } from "./item";
 import { customer } from "./customer";
 
 export class order{
-    item!:item[]
-    id!:number
-    orderNo!:number
-    customer!: customer
-    paymentMode!:string
-    orderDate!:Date
+    item:item[]= new Array()
+    id:number=0
+    orderNo:number=0
+    customer: customer= new customer
+    paymentMode:string=" "
+    orderDate:String=" "
 }

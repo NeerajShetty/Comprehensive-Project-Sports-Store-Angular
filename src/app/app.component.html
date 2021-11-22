@@ -1,5 +1,6 @@
+<h1 style="text-align:center;">Welcome to Sports Store!!</h1>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!isadmin()">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Sports Store</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,27 +8,33 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" onclick="alert('Click on items to see available items')" href="#" >Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#" routerLink='user/item'>Items <span class="sr-only">(current)</span></a>
       </li>
-
       <li class="nav-item active">
-        <a class="nav-link" href="#" *ngIf="authenticated()"  (click)='logout()' routerLink='/login'>logout <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="#" *ngIf="!authenticated()" routerLink='/login'>login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" routerLink='adminlogin'>Login-Admin <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" *ngIf="authenticated()"  (click)='logout()' routerLink='/login'>Logout <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" *ngIf="!authenticated()" routerLink='/login'>Login-Customer <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" routerLink='/register'>Register <span class="sr-only">(current)</span></a>
+        
       </li>
       <li class="nav-item active" *ngIf="authenticated()">
         <p class="nav-link">{{username}}</p>
       </li>
       <li class="nav-item active" *ngIf="authenticated()">
-        <a class="nav-link" href="#" routerLink='user/cart'>cart <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" routerLink='user/cart'>Cart <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
 </nav>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isadmin()">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Sports Store </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,10 +51,11 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="#" *ngIf="authenticated()"  (click)='logout()' routerLink='/login'>logout <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" *ngIf="authenticated()"  (click)='logout()' routerLink='/login'>Logout <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
+

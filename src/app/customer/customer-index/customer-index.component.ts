@@ -9,7 +9,11 @@ import { customer } from 'src/shared/Model/customer';
 })
 export class CustomerIndexComponent implements OnInit {
 
-  customers!:customer []
+  customers: customer[] = [];
+ 
+  
+ 
+  
   constructor(
     public customerService:CustomerService
   ) { }
@@ -25,10 +29,10 @@ export class CustomerIndexComponent implements OnInit {
     console.log(id)
     this.customerService.delete(id).subscribe(res => {
          this.customers = this.customers.filter(item => item.id !== id);
-         console.log('Post deleted successfully!');
+         console.log('Customer deleted successfully!');
     })
     console.log("completed")
 
   }
-
+ 
 }

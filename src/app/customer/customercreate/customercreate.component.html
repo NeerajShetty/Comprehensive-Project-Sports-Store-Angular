@@ -1,10 +1,9 @@
 <div class="container">
-    <h1>Create New customer</h1>
-    <a href="#" routerLink="/login" class="btn btn-primary">Back</a>
-
+    <h1>Register here!!</h1>
+    
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="form-group">
-            <label for="name">name:</label>
+            <label for="name">Name:</label>
             <input 
                 formControlName="name"
                 id="name" 
@@ -21,7 +20,7 @@
             </textarea>
         </div>
         <div class="form-group">
-            <label for="email">email:</label>
+            <label for="email">Email:</label>
             <input 
                 formControlName="email"
                 id="email" 
@@ -29,13 +28,13 @@
                 class="form-control">
         </div>
         <div class="form-group">
-            <label for="contactNumber">contactNumber:</label>
+            <label for="contactNumber">Contact Number:</label>
             <input 
                 formControlName="contactNumber"
                 id="contactNumber" 
                 type="text" 
                 class="form-control">
         </div>
-        <button class="btn btn-primary" type="submit" >Submit</button>
+        <button class="btn btn-primary" type="submit" >Register</button>
     </form>
 </div>

@@ -16,7 +16,7 @@
             <td>{{item.name}}</td>
             <td>{{item.color}}</td>
             <td>{{item.size}}</td>
-            <td>{{item.price}}</td>
+            <td>{{item.price}}$</td>
           </tr>
         </tbody>
         <tbody>
@@ -25,19 +25,19 @@
               <td></td>
               <td></td>
               <td>Total</td>
-              <td>{{sum}}</td>
+              <td>{{sum}}$</td>
             </tr>
           </tbody>
       </table>
-    <div class="form-group">
-        <label for="dateoforder">Date of Order:</label>
-        <input 
-            formControlName="dateoforder"
-            id="dateoforder" 
-            type="date" 
-            class="form-control">
-    </div>
-    <label  for="inlineRadio1">Payment Mode</label>
+   <dl>
+     <dt>
+       Date of Order
+     </dt>
+     <dd>
+       {{placedorder.orderDate}}
+     </dd>
+   </dl>
+      <label  for="inlineRadio1">Payment Mode</label>
     <div class="form-group">
         
         <div class="form-check form-check-inline">
@@ -59,5 +59,5 @@
             <label class="form-check-label" for="inlineRadio2">Cash</label>
           </div>
     </div>
-    <button type="submit" class="btn btn-primary">submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>

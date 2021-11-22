@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       console.log(res);
       if(res == null){
         
-        alert('inavalid credentials')
+        alert('Inavalid credentials, please register')
       }  
       else{
         this.localstorageservice.set("user",res)

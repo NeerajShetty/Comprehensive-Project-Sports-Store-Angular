@@ -29,7 +29,7 @@ export class AdminloginComponent implements OnInit {
         this.router.navigate(["/customer/index"]);  
       }  
       else{
-        alert('inavalid credentials')
+        alert('Inavalid credentials ')
       }
     }
 }

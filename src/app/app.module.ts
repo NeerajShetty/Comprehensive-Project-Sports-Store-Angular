@@ -34,6 +34,8 @@ import { UserRoutingModule } from './user/user-routing.module';
 import { AdminloginComponent } from './auth/adminlogin/adminlogin.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,8 @@ import { AdminloginComponent } from './auth/adminlogin/adminlogin.component';
     OrderindexComponent,
     LoginComponent,
     RegisterComponent,
-    AdminloginComponent,
+    AdminloginComponent
+    
    
   ],
   imports: [
@@ -63,7 +66,8 @@ import { AdminloginComponent } from './auth/adminlogin/adminlogin.component';
     MatTableModule,
     NgxWebstorageModule.forRoot(),
     UserModule,
-    UserRoutingModule
+    UserRoutingModule,
+   
   ],
   providers: [CustomerService,ItemService,AuthService,SessionStorageService,SessionStorageStrategy],
   bootstrap: [AppComponent]

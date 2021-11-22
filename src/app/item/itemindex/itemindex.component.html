@@ -1,5 +1,5 @@
 
-<button type="button" class="btn btn-primary" routerLink="/item/create">new Item</button>
+<button type="button" class="btn btn-primary" routerLink="/item/create">Add new item</button>
 <mat-grid-list cols="3" rowHeight="1:1">
     <mat-grid-tile *ngFor="let item of items">
             <div class="card" style="width: 18rem;">
@@ -10,9 +10,7 @@
                   <p class="card-text">{{item.size}}</p>
                   <p class="card-text">{{item.price}}</p>
                   <div class="row">
-                    <div class="col-auto mr-auto">
-                        <a href="#" class="btn btn-primary">Orders</a>
-                    </div>
+                   
                     <div class="col-auto">
                         <button (click)="deleteItem(item.id)"><i class="material-icons md-18">delete</i></button>
                         <a href="#" [routerLink]="['/item/update',item.id]"><i class="material-icons md-18">edit</i></a>
